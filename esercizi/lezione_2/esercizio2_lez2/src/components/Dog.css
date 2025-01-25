@@ -1,0 +1,22 @@
+.card {
+    background-color: rgb(123, 211, 211);
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+}
+
+
+
+#dogGenere{
+    background-color: chartreuse;
+}
+
+#dogEta{
+    font-style: italic;
+    font-size: x-large;
+    font-family: fantasy;
+    color: blue;
+}
