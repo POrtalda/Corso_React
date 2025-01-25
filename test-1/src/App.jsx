@@ -13,7 +13,7 @@ function App() {
     <Gatto/>                    
       <Intestazione1 message="titolo1"/>
       <Person name="SAbrina" age="89"/>
-      <Person name="Attilio" age="20"/>
+      <Person name="Attilio" age="20"/> 
       <Intestazione1 message="titolo2"/>
       
 
