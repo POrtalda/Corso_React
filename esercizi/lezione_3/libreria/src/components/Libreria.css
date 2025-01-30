@@ -1,0 +1,8 @@
+.libreria{
+    display: grid;
+    height: 100vh;  /* per riempire tutta la pagina */
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+    z-index: 0;
+}
