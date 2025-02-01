@@ -1,0 +1,25 @@
+.libro-container{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+padding: 15px;
+border-radius: 8px;
+max-width: 600px;
+}
+
+.libro-info{
+    flex: 1;
+}
+
+.libro-copertina{
+    max-width: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0);
+    transition: transform 0.5s ease;
+    transform-origin: center;
+}
+.libro-copertina:hover{
+    transform: scale(1.2);
+}

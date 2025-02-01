@@ -8,11 +8,11 @@ function App() {
   return (
     <>
       
-      <Libreria>
-        <Card>
-        <p>questo è il  contenuto della card</p>   
-        </Card>
-      </Libreria>
+      <Libreria />
+        
+        
+
+      
     </>
   )
 }
