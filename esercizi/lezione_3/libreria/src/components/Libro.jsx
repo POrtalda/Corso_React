@@ -41,7 +41,7 @@ export default function Libro({
           !acquistabile && (
             <div className="noAcquistabile">
               <p>
-                <b>Non disponibile</b>
+                Non disponibile
               </p>
               {(quantDisp = "")}
             </div>
