@@ -6,7 +6,8 @@ export default function Libreria(){
 
     return(
         <>
-        <Card>
+        <Card disponibile = {Libro.acquistabile}>
+            
                   
                   <Libro 
                   titolo = "Angeli e demoni" 
