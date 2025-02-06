@@ -1,10 +1,19 @@
 import "./Film.css"
 
-export default function Film(){
+export default function Film({id, titolo, regista, anno, genere, copertina }){
 
     return(
         <>
-        
+        <div className="film-info">
+            <p>Titolo: <b>{titolo}</b></p>
+            <p>Regista: <b>{regista}</b></p>
+            <p>Anno: <b>{anno}</b></p>
+            <p>Genere: <b>{genere}</b></p>
+            
+        </div>
+        <div className="film-copertina">
+            <img src= {copertina} alt={titolo} />
+        </div>
         </>
     )
 }
