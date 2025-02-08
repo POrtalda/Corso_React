@@ -1,10 +1,9 @@
-import Videoteca from './components/Videoteca'
-import Card from './components/Card'
+import Videoteca from "./components/Videoteca"
+import Card from "./components/Card"
 import './App.css'
-import Film from './components/Film'
 
-export default function App() {
-
+function App() { 
+  
   const films = [
     {
       id: 1,
@@ -50,30 +49,25 @@ export default function App() {
       genere: "Fantasy",
       copertina: "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjB-p7z75T-AhW_h_0HHQ6jC7MQjRx6BAgAEAY&url=https%3A%2F%2Fwww.themoviedb.org%2Fmovie%2F1894%2Fthe-lord-of-the-rings-the-return-of-the-king&psig=AOvVaw0v77-c3v8y6_N7j379n7-T&ust=1683838423236000",
       acquistabile : false
-    }
-  ]
+    }]
 
   return (
     <>
-      <Videoteca>
-        {films.map(film => ( 
-      <Card>
-         
-            <Film key={film.id} acquistabile = {film.acquistabile} 
-            film={film} 
-            titolo={film.titolo} 
-            regista = {film.regista}
-            anno = {film.anno}
-            genere = {film.genere}
-            copertina = {film.copertina}
-            />
-          <hr />
-        </Card>
-
-        ))}
-
-      </Videoteca>
+    <Videoteca>
+    <Card>
+    <Film_data>
+      <p>Titolo: <b>{films.titolo}</b></p>
+      <p>Regista: <b>{films.regista}</b></p>
+      <p>Anno: <b>{films.anno}</b></p>
+      <p>Genere: <b>{films.genere}</b></p>
+    </Film_data>
+    <Film_copertina>
+      <img src = {films.copertina} alt= {films.titolo} />
+    </Film_copertina>
+    </Card>
+    </Videoteca>
     </>
   )
 }
 
+export default App
