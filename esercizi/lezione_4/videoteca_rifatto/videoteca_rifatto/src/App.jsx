@@ -53,16 +53,16 @@ function App() {
 
   return (
     <>
-    <Videoteca>
+    <Videoteca title="Buona visione">
     <Card>
     <Film_data>
-      <p>Titolo: <b>{films.titolo}</b></p>
+    <p>Titolo: <b>{films.titolo}</b></p>
       <p>Regista: <b>{films.regista}</b></p>
       <p>Anno: <b>{films.anno}</b></p>
       <p>Genere: <b>{films.genere}</b></p>
     </Film_data>
     <Film_copertina>
-      <img src = {films.copertina} alt= {films.titolo} />
+    <img src = {films.copertina} alt= {films.titolo} /> 
     </Film_copertina>
     </Card>
     </Videoteca>
