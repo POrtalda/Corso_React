@@ -12,7 +12,7 @@ export default function Film({id, titolo, regista, anno, genere, copertina }){
             
         </div>
         <div className="film-copertina">
-            <img src= {copertina} alt={titolo} />
+            <img src={copertina} alt={titolo} />
         </div>
         </>
     )
