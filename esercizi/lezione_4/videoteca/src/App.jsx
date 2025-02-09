@@ -55,7 +55,7 @@ export default function App() {
 
   return (
     <>
-      <Videoteca>
+      <Videoteca title="Buona visione">
         {films.map(film => ( 
       <Card>
          
