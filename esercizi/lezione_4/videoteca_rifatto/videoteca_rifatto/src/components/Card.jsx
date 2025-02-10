@@ -1,6 +1,6 @@
 
 
-function Card({ title,children}) {
+function Card({ children}) {
   return (
     <div>
         <h1><b>{title}</b></h1>

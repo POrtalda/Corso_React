@@ -1,5 +1,8 @@
 import Videoteca from "./components/Videoteca"
 import Card from "./components/Card"
+import FilmData from "./components/FilmData"
+import FilmCopertina from "./components/FilmCopertina"
+
 import './App.css'
 
 function App() { 
@@ -54,17 +57,16 @@ function App() {
   return (
     <>
     <Videoteca title="Buona visione">
-    <Card>
-    <Film_data>
-    <p>Titolo: <b>{films.titolo}</b></p>
-      <p>Regista: <b>{films.regista}</b></p>
-      <p>Anno: <b>{films.anno}</b></p>
-      <p>Genere: <b>{films.genere}</b></p>
-    </Film_data>
-    <Film_copertina>
-    <img src = {films.copertina} alt= {films.titolo} /> 
-    </Film_copertina>
-    </Card>
+    {films.map(film => (
+      <Card key={film.id}>
+        <FilmData>
+          titolo={film.titolo}
+        </FilmData>
+        <FilmCopertina>
+          copertina={film.copertina}
+        </FilmCopertina>
+      </Card>
+    ))}
     </Videoteca>
     </>
   )
