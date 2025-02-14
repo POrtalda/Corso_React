@@ -1,0 +1,13 @@
+header{
+    background-color: rgb(114, 29, 193);
+    padding: 50px;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+header h1 span{
+    color: greenyellow;
+}

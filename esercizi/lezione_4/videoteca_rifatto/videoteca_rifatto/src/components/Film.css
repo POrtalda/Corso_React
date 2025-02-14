@@ -1,0 +1,17 @@
+.card-film{
+    
+    margin-bottom: 20px;
+    min-height: 100px;
+    border-radius: 20px;
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+}
+
+.film-active{
+    background-color: rgb(18, 111, 89);
+}
+
+.film-inactive{
+    background-color: rgb(244, 76, 74);
+}
