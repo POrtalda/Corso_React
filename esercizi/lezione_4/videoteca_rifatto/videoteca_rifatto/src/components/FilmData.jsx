@@ -10,7 +10,14 @@ export default function Filmdata({film}) {
             <p>[{film.genere}]</p>
             <p>durata: {film.durata}'</p>
             <p>({film.regista})</p>
-            <Button titolo={film.titolo}/>
+
+
+            {film.is_avaible ? (
+                <Button titolo={film.titolo}/>
+                ) : (
+                    <div style={{backgroundColor: 'yellow'}}>il film non è disponibile</div>
+                )}
+            
             </div>
         </>
     )
