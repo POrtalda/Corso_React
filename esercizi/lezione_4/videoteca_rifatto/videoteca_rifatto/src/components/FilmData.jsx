@@ -12,7 +12,7 @@ export default function Filmdata({film}) {
             <p>({film.regista})</p>
 
 
-            {film.is_avaible ? (
+            {film.is_available ? (
                 <Button titolo={film.titolo}/>
                 ) : (
                     <div style={{backgroundColor: 'yellow'}}>il film non è disponibile</div>
