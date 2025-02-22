@@ -4,6 +4,7 @@ import Button from './components/Button'
 import CardContact from './components/CardContact'
 import CardContactDetails from './components/CardContactDetails'
 import CardContactEdit from './components/CardContactEdit'
+import CardContactNew from './components/CardContactNew'
 
 export default function App() {
 
@@ -79,7 +80,11 @@ export default function App() {
       </div> */}
 
       {/* <CardContactDetails contact = {contacts[0]}/> */}
-      <CardContactEdit contact={contacts[0]}/>
+      
+        {/* <CardContactEdit contact={contacts[0]}/> */}
+        <CardContactNew contact={contacts[0]}/>
+          
+      
     </>
   )
 }

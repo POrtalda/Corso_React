@@ -1,6 +1,10 @@
 import './CardContact.css'
 
-export default function CardContactEdit({ contact }) {
+export default function CardContactEdit({ contact}) {
+
+    const handleSaveClick = () => {
+        alert('salvato');
+    };
     return (
         <>
             <div className='card-contact'>
@@ -10,20 +14,21 @@ export default function CardContactEdit({ contact }) {
                         value={contact.first_name + ' ' + contact.last_name} />
                 </h2>
                
-                <p style={{ marginBottom: '18px' }}>{contact.work}</p>
+                <p style={{ marginBottom: '18px' }}><input type='text' value={contact.work} /> </p>
 
                 <div style={{ display: 'flex' }}>
                     <span className="material-symbols-outlined">
                         phone_enabled
                     </span>
-                    <p style={{ marginLeft: '10px' }}>{contact.phone}</p>
+                    <p style={{ marginLeft: '10px' }}> <input type='text' value={contact.phone}/></p>
                 </div>
 
                 <div style={{ display: 'flex' }}>
                     <span className="material-symbols-outlined">
                         mail
                     </span>
-                    <p style={{ marginLeft: '10px' }}>{contact.email}</p>
+                    <p style={{ marginLeft: '10px' }}>
+                        <input type='text' value={contact.email} /> </p>
                 </div>
                 <img style={{
                     width: '100px',
@@ -31,6 +36,10 @@ export default function CardContactEdit({ contact }) {
                     marginTop: '20px'
 
                 }} src={contact.image} alt={contact.first_name} />
+                
+                <button onClick={handleSaveClick} style={{ marginTop: '20px' }}>
+                    Salva
+                </button>
             </div>
         </>
     )

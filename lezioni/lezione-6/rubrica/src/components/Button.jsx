@@ -12,8 +12,12 @@ export default function Button({ type }) {
         e.stopPropagation();
         alert('stai eliminando il contatto')
     }
+
     function handleClickAddNew() {
         alert('stai aggiungendo il contatto')
+    }
+    function handleClickSave() {
+        alert('salva le modifiche del contatto')
     }
 
     return (
@@ -39,6 +43,8 @@ export default function Button({ type }) {
                     add
                 </span>
             )}
+
+            
         </>
     )
 }
