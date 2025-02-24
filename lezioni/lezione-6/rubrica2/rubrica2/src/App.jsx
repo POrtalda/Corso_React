@@ -5,7 +5,7 @@ import CardTotal from './components/CardTotal'
 import Footer from './components/Footer'
 
 export default function App() {
- 
+
   const contacts = [
     {
       id: 1,
@@ -66,13 +66,18 @@ export default function App() {
 
   return (
     <>
-      <Header logoPiu = 'https://banner2.cleanpng.com/20180716/hzs/322b30b4f10b23cab633ac2cb6dbddc8.webp'/>
+      <Header logoPiu='https://banner2.cleanpng.com/20180716/hzs/322b30b4f10b23cab633ac2cb6dbddc8.webp' />
 
       <CardTotal>
-
+        <Menu />
+        <Search />
+        <CardContentData>
+          <Image />
+          <CardInfo />
+        </CardContentData>
       </CardTotal>
 
-      <Footer/>
+      <Footer />
     </>
   )
 }
