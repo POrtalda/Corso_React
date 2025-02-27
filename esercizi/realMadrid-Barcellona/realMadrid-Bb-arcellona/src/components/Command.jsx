@@ -6,7 +6,7 @@ export default function Command() {
       <div className="container">
         <div className="arrow_back">
           <button className='pulsante'>
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
               arrow_back
             </span>
           </button>
@@ -14,7 +14,7 @@ export default function Command() {
         <div className='right-buttons'>
           <div className="ios_share">
             <button className='pulsante'>
-              <span class="material-symbols-outlined">
+              <span className="material-symbols-outlined">
                 ios_share
               </span>
             </button>
@@ -22,8 +22,8 @@ export default function Command() {
 
           <div className="more_vert">
             <button className='pulsante'>
-              <span class="material-symbols-outlined">
-                more_vert
+              <span className="material-symbols-outlined">
+                more_horiz
               </span>
             </button>
           </div>

@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: aqua;
+    
   }
 
   .right-buttons {
     display: flex;
-    gap: 50px; /* Spazio tra i pulsanti a destra */
+    gap: 80px; /* Spazio tra i pulsanti a destra */
   }
 
   .material-symbols-outlined {
@@ -29,4 +29,5 @@
     font-size: 48px; /* Dimensione del testo */
     border-radius: 100px;
     background-color: #1a3dee;
+    color: white;
   }

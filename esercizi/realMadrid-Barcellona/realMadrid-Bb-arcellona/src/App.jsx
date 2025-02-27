@@ -3,6 +3,7 @@ import Command  from './components/Command'
 import Match  from './components/Match'
 import AppInferiore  from './components/AppInferiore'
 import Command_Default  from './components/Command_Default'
+import Team_Match_Casa  from './components/Team_Match_Casa'
 
 export default function App() {
   
@@ -193,7 +194,7 @@ export default function App() {
       <Command />
 
       <Match>
-
+        <Team_Match_Casa/>
       </Match>
 
       <AppInferiore>
