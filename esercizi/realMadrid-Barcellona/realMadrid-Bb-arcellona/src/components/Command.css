@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+  }
+
+  .right-buttons {
+    display: flex;
+    gap: 50px; /* Spazio tra i pulsanti a destra */
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48; /* Dimensione dell'icona */
+    font-size: inherit; /* Eredita la dimensione del font dal pulsante */
+    vertical-align: middle; /* Allinea verticalmente l'icona */
+}
+      
+  
+
+  .pulsante {
+    width: 200px; /* Larghezza del pulsante */
+    height: 200px; /* Altezza del pulsante */
+    padding: 10px; /* Spaziatura interna */
+    font-size: 48px; /* Dimensione del testo */
+    border-radius: 100px;
+    background-color: #1a3dee;
+  }
