@@ -1,0 +1,32 @@
+.team_logo {
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-between;
+  margin-top: 300px;
+  margin-left: 200px;
+}
+
+.team_logo span{
+  color: white;
+  
+}
+
+.team_name {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-left: 100px;
+  
+  color: white;
+  font-size: 70px;
+
+}
+
+.team_name h3 { /* Applica lo stile agli elementi h3 dentro .team_name */
+  margin-left: 30px; /* Riduce il margine sinistro (o usa un valore negativo) */
+  margin-right: 350px; /* Riduce il margine destro (o usa un valore negativo) */
+}

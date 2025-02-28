@@ -1,0 +1,26 @@
+.menu {
+    width: 100%;
+    color: white;
+    padding: 10px ;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0;
+    margin-left: -120px;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 15px;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+  }
+  
+  

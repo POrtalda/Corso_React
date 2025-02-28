@@ -3,7 +3,9 @@ import Command  from './components/Command'
 import Match  from './components/Match'
 import AppInferiore  from './components/AppInferiore'
 import Command_Default  from './components/Command_Default'
-import Team_Match_Casa  from './components/Team_Match_Casa'
+import Teams_Match  from './components/Teams_Match'
+import Menu  from './components/Menu'
+import InfoPartite  from './components/InfoPartite'
 
 export default function App() {
   
@@ -194,11 +196,12 @@ export default function App() {
       <Command />
 
       <Match>
-        <Team_Match_Casa/>
+        <Teams_Match/>
       </Match>
 
       <AppInferiore>
-
+        <Menu/>
+        <InfoPartite/>
       </AppInferiore>
 
       <Command_Default/>

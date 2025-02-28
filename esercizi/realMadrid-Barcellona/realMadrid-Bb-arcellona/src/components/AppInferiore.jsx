@@ -1,7 +1,7 @@
-export default function AppInferiore() {
+export default function AppInferiore({children}) {
     return (
       <>
-      
+        {children}
       </>
     )
   }
