@@ -1,0 +1,8 @@
+.card{
+    background-color: blue;
+    color: orange;
+    border-radius: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
