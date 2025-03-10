@@ -1,0 +1,21 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+    color: rgb(201, 243, 48);
+}
+
+.nav-bar{
+
+
+height: 20%;
+width: 100%;
+margin-left: 20%;
+
+}
+
+.icons{
+    margin-right: 20%;
+
+}

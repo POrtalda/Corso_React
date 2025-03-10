@@ -1,0 +1,12 @@
+.search {
+    background-color: rgb(61, 59, 59);
+    color: beige;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.search input {
+    background-color: rgb(127, 117, 117);
+}
