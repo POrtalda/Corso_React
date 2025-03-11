@@ -14,7 +14,7 @@ export default function App() {
 
   // const utenti = [
   //   { id: 1, name: 'Aldo' },
-  //   { id: 2, name: 'Luca' },           
+  //   { id: 2, name: 'Luca' },    
   //   { id: 3, name: 'Mario' },
   //   { id: 4, name: 'Paolo' },
   //   { id: 5, name: 'Alessandro' },
