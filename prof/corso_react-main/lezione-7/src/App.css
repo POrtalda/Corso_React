@@ -1,0 +1,36 @@
+
+
+.counter {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.counter-not-work {
+  background-color: #df6262d3;
+}
+.counter-work {
+  background-color: #75df62d3;
+}
+
+section.light {
+  background-color: lightblue;
+  color: black;
+}
+section.dark {
+  background-color: rgb(32, 31, 72);
+  color: white;
+}
+
+.material-symbols-outlined {
+  font-size: 80px;
+  
+}
+
+
+.star-filled {
+  font-variation-settings: 'FILL' 1;
+  color: orange;
+}
+.star-not-filled {
+  font-variation-settings: 'FILL' 0;
+}

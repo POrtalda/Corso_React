@@ -1,3 +1,8 @@
+.app{
+    height: 100%;
+}
+
 body{
     background-color: rgb(61, 59, 59);
+    
 }

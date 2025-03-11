@@ -3,17 +3,23 @@ import './App.css'
 import NavBar from './components/NavBar'
 import Search from './components/Search'
 import Main from './components/Main'
-function App() {
- 
+import { useState } from 'react';
+export default function App() {
+  const [isDarkModeActive, setIsDarkModeActive] = useState(false);
+
   return (
     <>
-     <NavBar/>
+     <NavBar isDarkModeActive={isDarkModeActive}
+              setIsDarkModeActive={setIsDarkModeActive}
+               />
 
-     <Search/>
+     <Search isDarkModeActive={isDarkModeActive}
+              setIsDarkModeActive={setIsDarkModeActive}/>
 
-     <Main/>
+     <Main isDarkModeActive={isDarkModeActive}
+              setIsDarkModeActive={setIsDarkModeActive}/>
     </>
   )
 }
 
-export default App
+ 

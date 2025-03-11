@@ -1,19 +1,27 @@
 import './NavBar.css'
 import { HiMusicalNote } from "react-icons/hi2";
+import { MdOutlineLightMode } from "react-icons/md";
+import { MdOutlineDarkMode } from "react-icons/md";
 
-export default function NavBar() {
+export default function NavBar({isDarkModeActive, setIsDarkModeActive}) {
+  
   return (
     <>
       <nav className='nav'>
         <div className="nav-bar">
           <h1>SpotiReact</h1>
-
-          <HiMusicalNote  />
+          <HiMusicalNote style={{fontSize: 'xx-large'}}/>
         </div>
 
         <div className='icons'>
-          <br />
-          <button> dark / light</button>
+         
+          <span onClick={()=> setIsDarkModeActive(!isDarkModeActive)} >
+          {isDarkModeActive ? (
+            <MdOutlineLightMode />
+          ) : (
+            <MdOutlineDarkMode />
+          )}
+            </span>
         </div>
       </nav>
 
