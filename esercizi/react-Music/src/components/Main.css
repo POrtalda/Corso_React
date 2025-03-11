@@ -32,18 +32,42 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    /* transition: transform 0.2s ease; */
 }
 
+
+
 .card {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    /* background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px; */
     padding: 20px;
     width: 200px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
+    /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
+    /* transition: transform 0.2s ease; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.card:hover {
-    transform: scale(1.05);
+ 
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente l'immagine */
+    width: 100%; /* Assicurati che il contenitore occupi tutta la larghezza della card */
 }
+
+.image-container img {
+    max-width: 100%; /* Assicura che l'immagine non superi la larghezza del contenitore */
+    height: auto; /* Mantieni le proporzioni dell'immagine */
+    display: block; /* rimuove spazi indesiderati intorno all'immagine */
+   
+}
+
+
+ .card-hover{
+    transition:transform 0.3s ease ;
+ }
+ .card-hover :hover{
+    transform: scale(1.05);
+ }

@@ -10,7 +10,7 @@ export default function NavBar({isDarkModeActive, setIsDarkModeActive}) {
       <nav className='nav'>
         <div className="nav-bar">
           <h1>SpotiReact</h1>
-          <HiMusicalNote style={{fontSize: 'xx-large'}}/>
+          <HiMusicalNote style={{fontSize: 'xx-large', color: 'beige'}}/>
         </div>
 
         <div className='icons'>
