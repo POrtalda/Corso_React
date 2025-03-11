@@ -3,6 +3,7 @@ import './Main.css'
 export default function Main({ isDarkModeActive, 
   setIsDarkModeActive,search,setSearch,playlists }) {
  
+  const filteredPlaylists = playlists.filter(p => p.title.toLowerCase().startsWith(search))
   return (
     <>
       <div className='main'>
@@ -10,9 +11,8 @@ export default function Main({ isDarkModeActive,
           <h4 id='leTuePlaylist'>le tue playlist:</h4>
           <div className='card-container'>
             {
-              playlists
-              .filter(p => p.title.toLowerCase().startsWith(search))
-              .map(playlist => (
+              
+              filteredPlaylists.map(playlist => (
 
                 <div key={playlist.id} className='card-hover'>
                   <div><p className='card'>{playlist.title}</p>
