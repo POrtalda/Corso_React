@@ -13,8 +13,13 @@ export default function Main({ isDarkModeActive,
           <h4 id='leTuePlaylist'>le tue playlist:</h4>
           <div className='card-container'>
             {
-              filteredPlaylists.map(playlist => (
-                <PlaylistCard key={playlist.id} playlist={playlist} />
+              filteredPlaylists.lenght == 0 ? (
+                  console.log('playlist non trovata')
+              ) : (
+                filteredPlaylists.map(playlist => (
+                  <PlaylistCard key={playlist.id} playlist={playlist} />
+              )
+              
               ))
             }
 
