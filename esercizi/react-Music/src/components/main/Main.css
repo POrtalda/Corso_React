@@ -1,27 +1,27 @@
-.main{
+.main {
     min-height: 100vh;
     width: 100%;
-    
-    
+
+
 }
 
 .main-light {
     background-color: rgb(61, 59, 59);
     color: beige;
-    min-height: 100vh; 
-      
+    min-height: 100vh;
+
 }
 
 .main-dark {
     background-color: rgb(245, 235, 235);
-    color: rgb(10, 245, 53); 
-    min-height: 100vh; 
-     
+    color: rgb(10, 245, 53);
+    min-height: 100vh;
+
 }
 
 
 
-#leTuePlaylist{
+#leTuePlaylist {
     text-align: center;
     padding-top: 30px;
 }
@@ -49,25 +49,41 @@
     margin-right: auto;
 }
 
- 
+
 
 .image-container {
     display: flex;
-    justify-content: center; /* Centra orizzontalmente l'immagine */
-    width: 100%; /* Assicurati che il contenitore occupi tutta la larghezza della card */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+  
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+
+.card-hover {
+    transition: transform 0.3s ease;
 }
 
-.image-container img {
-    max-width: 100%; /* Assicura che l'immagine non superi la larghezza del contenitore */
-    height: auto; /* Mantieni le proporzioni dell'immagine */
-    display: block; /* rimuove spazi indesiderati intorno all'immagine */
-   
-}
-
-
- .card-hover{
-    transition:transform 0.3s ease ;
- }
- .card-hover :hover{
+.card-hover :hover {
     transform: scale(1.05);
- }
+}
+
+.description {
+  margin-top: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+  max-width: 100%;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
