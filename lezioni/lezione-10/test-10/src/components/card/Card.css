@@ -1,0 +1,8 @@
+.card-movie{
+    width: 80%;
+    
+    background-color: rgb(46, 41, 41);
+    color: white;
+    border-radius: 15px;
+    margin-top: 25px;
+}
