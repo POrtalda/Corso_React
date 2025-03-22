@@ -8,20 +8,18 @@ import Button from './components/button/Button'
 
 export default function App() {
 
-  const [products, setProducts] = useState([{
-    id: 1, product: 'pane',
-  }])
+  const [products, setProducts] = useState([])
+  
 
   return (
     <>
       <Tittle />
 
-      <CardContainer>
-        <Card />
-        <Acquistato />
+      <CardContainer >
+       <Card products = {products}/>
       </CardContainer>
 
-      <Button />
+      <Button products = {products} setProducts={setProducts}/>
     </>
   )
 }
