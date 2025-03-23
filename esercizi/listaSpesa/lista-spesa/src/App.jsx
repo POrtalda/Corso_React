@@ -16,7 +16,7 @@ export default function App() {
       <Tittle />
 
       <CardContainer >
-       <Card products = {products}/>
+       <Card products = {products} onClickRemove={(id)=>setProducts(products.filter(product => product.id !== id)) }/>
       </CardContainer>
 
       <Button products = {products} setProducts={setProducts}/>

@@ -1,6 +1,6 @@
 import './Card.css'
 
-export default function Card({ products }) {
+export default function Card({ products, onClickRemove }) {
   return (
     <>
       <ul>
@@ -8,6 +8,7 @@ export default function Card({ products }) {
           <div key={product.id} className='card'>
           <li >{product.nameProduct}</li>
           <button>fatto</button>
+          <button onClick={()=> onClickRemove(product.id)}>rimuovi</button>
           </div>
         ))}
       </ul>

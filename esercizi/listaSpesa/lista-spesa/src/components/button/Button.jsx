@@ -20,7 +20,7 @@ export default function Button({products, setProducts}) {
       <div className='btn'>
         <input type="text" value={aggiungiProduct} 
         onChange={(e) => setAggiungiProduct(e.target.value)}/>
-        <button onClick={handleClick}>Aggiungi/Rimuovi</button>
+        <button onClick={handleClick}>Aggiungi</button>
       </div>
     </>
   )
