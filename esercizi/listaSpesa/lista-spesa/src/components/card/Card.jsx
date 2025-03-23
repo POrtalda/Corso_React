@@ -1,17 +1,24 @@
-import './Card.css'
+import './Card.css';
 
-export default function Card({ products, onClickRemove }) {
+export default function Card({ products, onClickRemove, setSelectedProductId, selectedProductId }) {
   return (
-    <>
-      <ul>
-        {products.map((product) => (
-          <div key={product.id} className='card'>
-          <li >{product.nameProduct}</li>
-          <button>fatto</button>
-          <button onClick={()=> onClickRemove(product.id)}>rimuovi</button>
-          </div>
-        ))}
-      </ul>
-    </>
-  )
+    <ul className="card-list">
+      {products.map((product) => {
+        const isSelected = selectedProductId === product.id;
+
+        return (
+          <li key={product.id} className={`card ${isSelected ? 'acquistato' : ''}`}>
+            <div className="card-left">
+              <span className="product-icon">🛒</span>
+              <span className="product-name">{product.nameProduct}</span>
+            </div>
+            <div className="card-buttons">
+              <button className="btn-check" onClick={() => setSelectedProductId(product.id)}>✔</button>
+              <button className="btn-remove" onClick={() => onClickRemove(product.id)}>✖</button>
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  );
 }

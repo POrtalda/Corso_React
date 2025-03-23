@@ -10,16 +10,21 @@ export default function App() {
 
   const [products, setProducts] = useState([])
   
+  const [selectedProductId, setSelectedProductId] = useState(null)
 
   return (
     <>
       <Tittle />
 
       <CardContainer >
-       <Card products = {products} onClickRemove={(id)=>setProducts(products.filter(product => product.id !== id)) }/>
+       <Card products = {products} 
+       onClickRemove={(id)=>setProducts(products.filter(product => product.id !== id)) }
+       setSelectedProductId = {setSelectedProductId}
+       selectedProductId={selectedProductId}/>
       </CardContainer>
 
-      <Button products = {products} setProducts={setProducts}/>
+      <Button products = {products} 
+      setProducts={setProducts}/>
     </>
   )
 }
