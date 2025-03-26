@@ -1,0 +1,16 @@
+.item{
+    background-color: lightgray;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selected{
+    background-color: lightsalmon;
+}
+
+.btns{
+    display: flex;
+}
