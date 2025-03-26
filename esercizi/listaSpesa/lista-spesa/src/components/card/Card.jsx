@@ -4,7 +4,7 @@ export default function Card({ products, onClickRemove, setSelectedProductId, se
   return (
     <ul className="card-list">
       {products.map((product) => {
-        const isSelected = selectedProductId === product.id;
+        const isSelected = selectedProductId.includes(product.id);
 
         return (
           <li key={product.id} className={`card ${isSelected ? 'acquistato' : ''}`}>
@@ -13,7 +13,18 @@ export default function Card({ products, onClickRemove, setSelectedProductId, se
               <span className="product-name">{product.nameProduct}</span>
             </div>
             <div className="card-buttons">
-              <button className="btn-check" onClick={() => setSelectedProductId(product.id)}>✔</button>
+              <button 
+                className="btn-check" 
+                onClick={() => {
+                  if (selectedProductId.includes(product.id)) {
+                    setSelectedProductId(selectedProductId.filter((id) => id !== product.id));
+                  } else {
+                    setSelectedProductId([...selectedProductId, product.id]);
+                  }
+                }}
+              >
+                ✔
+              </button>
               <button className="btn-remove" onClick={() => onClickRemove(product.id)}>✖</button>
             </div>
           </li>

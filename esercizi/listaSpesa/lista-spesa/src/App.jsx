@@ -10,7 +10,7 @@ export default function App() {
 
   const [products, setProducts] = useState([])
   
-  const [selectedProductId, setSelectedProductId] = useState(null)
+  const [selectedProductId, setSelectedProductId] = useState([])
 
   return (
     <>
