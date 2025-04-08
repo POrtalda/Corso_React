@@ -1,0 +1,118 @@
+.expiring {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  .insurance, .road-tax, .service, .inspection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h5 {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .alert {
+    color: white;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .alert:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .alert-black {
+    background-color: #6c757d;
+    animation: shake 0.6s infinite;
+  }
+  
+  .alert-red {
+    background-color: #e63946;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .alert-orange {
+    background-color: #f4a261;
+  }
+  
+  .alert-green {
+    background-color: #2a9d8f;
+    color: white;
+  }
+  
+  /* Effetto pulse */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7);
+    }
+    70% {
+      transform: scale(1.08);
+      box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
+    }
+  }
+  
+  /* Effetto shake */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+  }
+  
+  h5 {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+  }
+  
+  .icon {
+    font-size: 16px;
+    animation: bounce 2s infinite;
+    color: #555;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+  
