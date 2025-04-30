@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 export default function Data() {
-  const [images, setImages] = useState(null);
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/photos')
