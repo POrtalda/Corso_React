@@ -1,0 +1,15 @@
+ul {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    row-gap: 10px;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

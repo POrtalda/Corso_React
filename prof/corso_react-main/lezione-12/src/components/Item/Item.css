@@ -1,0 +1,21 @@
+.item {
+    background-color: lightgray;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    /* centra orizzontalmente */
+    justify-content: space-around; 
+    /* centra verticalmente */
+    align-items: center;
+}
+
+.selected {
+    background-color: lightseagreen;
+}
+
+.btns {
+    display: flex;
+
+}
+

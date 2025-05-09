@@ -1,0 +1,34 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
+}
+
+.main-data {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.main-data-b-m {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* background-color: red; */
+    width: 100%;
+}
+
+.main-data-km {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.main-img {
+    width: 100px;
+}
+.main-img img {
+    width: 100%;
+}

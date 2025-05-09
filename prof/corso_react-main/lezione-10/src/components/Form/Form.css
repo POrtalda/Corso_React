@@ -1,0 +1,15 @@
+.movie-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    margin-top: 20px;
+}
+
+.movie-form input {
+    width: 80%;
+    height: 25px;
+    border-radius: 7px;
+    background-color: #c8edc8;
+    text-align: center;
+}

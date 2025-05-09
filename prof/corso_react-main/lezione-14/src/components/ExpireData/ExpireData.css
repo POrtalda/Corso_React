@@ -1,0 +1,39 @@
+.expirings {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.insurance, .road-tax, .service, .inspection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+h5 {
+    color: red;
+}
+.alert {
+    width: 50px;
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.alert-black {
+    background-color: black;
+}
+.alert-red {
+    background-color: red;
+}
+.alert-orange {
+    background-color: orange;
+}
+.alert-green {
+    background-color: green;
+}
