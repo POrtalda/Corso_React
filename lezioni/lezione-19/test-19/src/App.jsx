@@ -3,7 +3,8 @@ import { useState } from 'react'
 import './App.css'
 import Counter from './components/Counter/Counter'
 import Counter2 from './components/Counter2/Counter2'
-import Notification from './components/Notification/Notification'
+import Notifications_UseState from './components/Notification_UseState/Notifications_UseState'
+import Notifications_UseReduce from './components/Notifications_UseReducer/Notifications_UseReduce'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +13,9 @@ function App() {
     <>
       {/* <Counter/> */}
       {/* <Counter2/> */}
-      <Notification/>
+      <Notifications_UseState/>
+      <hr />
+      <Notifications_UseReduce/>
     </>
   )
 }
