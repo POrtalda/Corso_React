@@ -1,5 +1,7 @@
 
 import './App.css'
+import ChiamataAPI from './components/ChiamataAPI/ChiamataAPI'
+import ChiamataApiVera from './components/ChiamataApiVera/ChiamataApiVera'
 import Clock from './components/Clock'
 import ColorePreferito from './components/ColorePreferito/ColorePreferito'
 import ContatoreStepVariabile from './components/ContatoreStepVariabile/ContatoreStepVariabile'
@@ -31,7 +33,9 @@ export default function App() {
       {/* <ContatoreStepVariabile/> */}
       {/* <ControlloLogin/> */}
       {/* <<ColorePreferito/>> */}
-      <MostraDataEOra/>
+      {/* <MostraDataEOra/> */}
+      {/* <ChiamataAPI/> */}
+      <ChiamataApiVera/>
     </>
   )
 }
