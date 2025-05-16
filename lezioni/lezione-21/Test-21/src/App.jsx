@@ -1,33 +1,34 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {GandaLorem} from 'gandalorem';
 import './App.css'
+import Post from './components/Post/Post'
+import Footer from './components/Footer/Footer'
+import { LikeContext } from './context/LikeContext'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [post, setPost] = useState({
+    id: 1,
+    descr: 'Foto bellissima della luna',
+    urlImg: 'data:image/jpeg;base64,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',
+    likesCount: 42,
+
+  })
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <LikeContext.Provider value={post.likesCount}>
+
+        <Post post={post} />
+        <hr />
+        <hr />
+
+        <Footer />
+      </LikeContext.Provider>
+    <p>
+      <GandaLorem words={25}/>
+    </p>
+
+
     </>
   )
 }
