@@ -1,8 +1,10 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { ThemeContext } from "../../Context/ThemeContext"
 
 
 export default function Counter() {
     const [count, setCount] = useState(0)
+    const {darkMode} = useContext(ThemeContext)
   return (
     <>
     <div>
