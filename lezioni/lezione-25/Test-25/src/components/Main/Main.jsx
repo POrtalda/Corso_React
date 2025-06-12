@@ -1,3 +1,4 @@
+import Footer from '../Footer/Footer';
 import Menu from '../Menu/Menu';
 import './Main.css';
 
@@ -7,6 +8,7 @@ export default function Main({children}) {
         <>
             <Menu/>
             {children}
+            <Footer/>
         </>
     );
 }
