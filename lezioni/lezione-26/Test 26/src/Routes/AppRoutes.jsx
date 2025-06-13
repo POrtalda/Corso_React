@@ -9,48 +9,64 @@ import ProductDetail from '../components/ProductDetail/ProductDetail'
 
 export default function AppRoutes() {
     return (
-        <>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={
+        <BrowserRouter>
+            <Routes>
+                <Route
+                    path="/"
+                    element={
                         <Main>
                             <App />
-                        </Main>} />
+                        </Main>
+                    }
+                />
 
-                    <Route path='/about' element={
+                <Route
+                    path="/about"
+                    element={
                         <Main>
                             <About />
-                        </Main>} />
+                        </Main>
+                    }
+                />
 
-                    <Route path='/products' element={
+                <Route
+                    path="/products"
+                    element={
                         <Main>
                             <Products />
-                        </Main>}
+                        </Main>
+                    }
+                >
+                    <Route
+                        path="onsale"
+                        element={<SaleProducts />}
                     >
-                        <Route path='onsale' element={
-                            <SaleProducts />
-                        }>
-                            <Route path=':id' element={
-                                
-                                    <ProductDetail/>
-                                
-                            }/>
-                        </Route>
-                        <Route path='notavaible' element={
-                            <NotAvailProducts />
-                        } />
+                        <Route
+                            path=":id"
+                            element={<ProductDetail />}
+                        />
                     </Route>
 
-                    <Route path='*' element={
+                    <Route
+                        path="notavaible"
+                        element={<NotAvailProducts />}
+                    >
+                        <Route
+                            path=":id"
+                            element={<ProductDetail />}
+                        />
+                    </Route>
+                </Route>
+
+                <Route
+                    path="*"
+                    element={
                         <Main>
                             <h1>Pagina non esistente</h1>
                         </Main>
-
-                    } />
-
-                </Routes>
-            </BrowserRouter>
-
-        </>
+                    }
+                />
+            </Routes>
+        </BrowserRouter>
     )
 }
