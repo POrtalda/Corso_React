@@ -1,10 +1,11 @@
 import './Film.css';
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
-export default function Film({ movie }) {
+export default function Film({ movie, toggleFavorite }) {
 
     function handleClicHeart(){
-        alert('ti piace')
+        // alert('ti piace')
+        toggleFavorite(movie.id)
         // TO DO al click sul cuore bisogna aggiornare lo stato movies andando a 
         // modificare la proprietà isFavorite del film cliccato
         // criticita:
