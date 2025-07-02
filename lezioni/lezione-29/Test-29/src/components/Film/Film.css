@@ -19,6 +19,10 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.card-movie-info span{
+    width: 30px;
+}
 .card-movie-img {
     width: 600px;
     overflow: hidden;

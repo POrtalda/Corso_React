@@ -1,15 +1,19 @@
 import './Film.css';
 import { FaHeart, FaRegHeart, FaCat } from "react-icons/fa";
 
-export default function Film({ movie }) {
+export default function Film({ movie, updateMovies }) {
 
     function handleClickHeart() { 
-        alert('hai cliccato sul cuore!');
-        // TO DO: al click sul cuore, bisogna aggiornare lo stato movies andando a 
-        // modificare la proprietà isFavorite del film cliccato 
-        // criticità:
-        // 1. quando entriamo in questa funzione, dobbiamo avere l'id del film cliccato
-        // 2. dobbiamo aggiornare lo stato moivies, ma il setMovies non è disponibile qui, ma un livello sopra (App.jsx)
+        // 1.trovo l'id del film cliccato
+        //alert(`hai cliccato sul film con id ${movie.id}`);       
+        // 2. dobbiamo aggiornare lo stato moivies,
+        //  ma il setMovies non è disponibile qui, ma un livello sopra (App.jsx)
+        //test(movie.id);
+
+        // un nuovo oggetto identico a movie ma invertendo il valore di isFavorite
+        const newMovie = {...movie, isFavorite: !movie.isFavorite}
+
+        updateMovies(newMovie)
     }
 
     return (
