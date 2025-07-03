@@ -8,6 +8,9 @@ function App() {
   // stato che racchiuda i film
   const [movies, setMovies] = useState(null);
 
+  // creo stato per il button dei preferiti/tutti
+  const [showFavorite, setShowFavorite] = useState(false)
+
   // effetto collaterale che scatta quando
   // componente App viene montato
   useEffect(() => {
@@ -67,6 +70,9 @@ function App() {
   return (
     <>
       <h1>ReactFilm Library 🎥</h1>
+      <button onClick={() => setShowFavorite(!showFavorite)}>
+        {showFavorite ? ('TUTTI') : ('PREFERITI')}
+      </button>
 
       {/* se movies è null, non dobbiamo ciclare l'array
           ma mostriamo un messaggio di caricamento...
@@ -74,7 +80,9 @@ function App() {
           mostriamo il componente Film
       */}
       {movies !== null ? (
-        movies.map(movie => (
+        // questa è la logica del button 'preferiti/tutti'
+        (showFavorite ? movies.filter(movie => movie.isFavorite) : movies)
+        .map(movie => (
           <Film key={movie.id} movie={movie} updateMovies={handleUpdateMovies} />
         ))
       ) : (
