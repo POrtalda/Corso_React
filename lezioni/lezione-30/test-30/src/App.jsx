@@ -4,7 +4,13 @@ import Recipe from './components/Recipe/Recipe'
 
 const API_URL = 'https://portalda.github.io/fake-api-recipes/recipes.json';
 
+/*
+  aggiungi h1 un contatore  sotto il titolo 
+  della pagina delle ricette preferite, 
+*/ 
 function App() {
+
+  
   const [recipes, setRecipes] = useState(null)
   const [showFavorite, setShowFavorite] = useState(false)
 
