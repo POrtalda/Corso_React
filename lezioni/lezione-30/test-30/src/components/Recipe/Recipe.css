@@ -1,4 +1,4 @@
-.card-recipe{
+.card-recipe {
     background-color: rgb(200, 203, 206);
     margin-bottom: 20px;
     margin-top: 20px;
@@ -9,7 +9,7 @@
     transition: all 0.5s;
 }
 
-.card-recipe:hover{
+.card-recipe:hover {
     transform: scale(1.05);
 }
 
@@ -19,7 +19,13 @@
     margin-top: 20px;
 }
 
-.icon{
+.icon {
     font-size: 30px;
-    width: 30px;
+
+}
+
+.div-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

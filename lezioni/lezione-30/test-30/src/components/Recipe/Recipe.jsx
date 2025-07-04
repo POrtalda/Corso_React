@@ -9,7 +9,7 @@ export default function Recipe({ recipe,updateRecipe }) {
                 <h2>{recipe.title}</h2>
                 <img src={recipe.photo} alt={recipe.title} />
 
-                <div  onClick={() => updateRecipe(recipe)}>
+                <div className='div-icon' onClick={() => updateRecipe(recipe)}>
                     {recipe.isFavorite ? (
                         <IoIosStar className='icon'/>
                     ) : (
