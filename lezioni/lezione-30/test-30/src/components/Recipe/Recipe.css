@@ -21,11 +21,11 @@
 
 .icon {
     font-size: 30px;
-
+    cursor: pointer;
 }
 
 .div-icon {
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: center;
 }

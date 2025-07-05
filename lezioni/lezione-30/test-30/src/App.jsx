@@ -84,7 +84,7 @@ function App() {
         {showFavorite ? (
           'tutte le ricette'
         ): (
-          'preferite'
+          'ricette preferite'
         )}
       </button>
 

@@ -1,30 +1,26 @@
 import './Recipe.css';
 import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 
-export default function Recipe({ recipe,updateRecipe }) {
+export default function Recipe({ recipe, updateRecipe }) {
 
-    return (
-        <>
-            <div className='card-recipe'>
-                <h2>{recipe.title}</h2>
-                <img src={recipe.photo} alt={recipe.title} />
+  const FavoriteIcon = recipe.isFavorite ? IoIosStar : IoIosStarOutline;
 
-                <div className='div-icon' onClick={() => updateRecipe(recipe)}>
-                    {recipe.isFavorite ? (
-                        <IoIosStar className='icon'/>
-                    ) : (
-                        <IoIosStarOutline className='icon'/>
-                    )}
-                    
-                    
-                </div>
+  return (
+    <div className='card-recipe'>
+      <h2>{recipe.title}</h2>
+      <img src={recipe.photo} alt={recipe.title} />
 
-                <p>di {recipe.author}</p>
-                <p>⌛ {recipe.prep_time}</p>
-                <p>{recipe.cuisine_type}</p>
-                <p>{recipe.description}</p>
+      <div className='div-icon'>
+        <FavoriteIcon
+          className='icon'
+          onClick={() => updateRecipe(recipe)}
+        />
+      </div>
 
-            </div>
-        </>
-    );
+      <p>di {recipe.author}</p>
+      <p>⌛ {recipe.prep_time}</p>
+      <p>{recipe.cuisine_type}</p>
+      <p>{recipe.description}</p>
+    </div>
+  );
 }
