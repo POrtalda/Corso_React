@@ -66,10 +66,19 @@ function App() {
     setRecipes(recipes.map(updateRecipe => (
       updateRecipe.id === newRecipe.id ? newRecipe : updateRecipe)))
   }
+  // calcolo il numero di ricette preferite
+  // se recipes esiste
+  // le filtro
+  // e mantengono solo quelle con isFavorite true
+  // e con il metodo lenght calcolo il numero di ricette preferite
+ const favRecipesCount = recipes ? recipes.filter(recipe => recipe.isFavorite).length || 0 : 0;
+
 
   return (
     <>
       <h1>🥧 Ricette Reactose 🍝</h1>
+      <br />
+      <h2>hai selezionato {favRecipesCount} ricett{favRecipesCount >1 ? ('e'):('a')} preferit{favRecipesCount >1 ? ('e'):('a')}</h2>
 
       <button onClick={() => setShowFavorite(!showFavorite)}>
         {showFavorite ? (
