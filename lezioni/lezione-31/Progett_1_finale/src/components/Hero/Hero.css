@@ -1,0 +1,9 @@
+.card-hero{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    
+}
