@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Hero from './components/Hero/Hero'
 
-function App({ children, heroes }) {
+function App({ children, heroes, toggleFavorite }) {
   const [count, setCount] = useState(0)
 
   return (
@@ -10,10 +10,11 @@ function App({ children, heroes }) {
       {/* children è il menu */}
       {children}
       {heroes !== null ? (
-        heroes.map(h => (<Hero key={h.id} hero_name={h.name}/>))
+        heroes.map(h => (
+        <Hero key={h.id} hero={h} toggleFavorite={() => toggleFavorite(h.id)}/>))
 
       ) : (
-        <h1>nessun supereore disponibile</h1>
+        <h1>nessun supereore disponibile...</h1>
       )}
     </>
   )

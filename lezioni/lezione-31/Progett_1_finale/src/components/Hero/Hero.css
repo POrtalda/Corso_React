@@ -7,3 +7,13 @@
     margin-bottom: 8px;
     
 }
+
+.light{
+color: darkblue;
+background-color: goldenrod;
+}
+
+.dark{
+background-color: darkblue;
+color: goldenrod;
+}

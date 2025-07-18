@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router';
 import './Menu.css';
+import DarkLight from '../DarkLight/DarkLight';
 
 export default function Menu({title}) {
 
@@ -18,6 +19,7 @@ export default function Menu({title}) {
                     </NavLink>
                 </li>
             </ul>
+            <DarkLight />
             <h1>{title}</h1>
         </>
     );
