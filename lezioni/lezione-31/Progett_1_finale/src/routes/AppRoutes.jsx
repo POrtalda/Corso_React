@@ -97,7 +97,7 @@ export default function AppRoutes() {
                         } />
                         <Route path="favorite" element={
 
-                            <App heroes={heroes} 
+                            <App heroes={heroes ?  heroes.filter(h => h.isFavorite) : []} 
                             toggleFavorite={(id) => toggleFavorite(id) || []}>
                                 <Menu title='preferiti' />
                             </App>

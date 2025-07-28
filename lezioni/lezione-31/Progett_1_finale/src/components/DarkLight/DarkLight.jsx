@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import './DarkLight.css';
 import { ThemeContext } from '../../context/ThemeContext';
+import { MdLightbulbOutline, MdOutlineDarkMode } from "react-icons/md";
 
 export default function DarkLight() {
 
@@ -9,7 +10,11 @@ export default function DarkLight() {
     return(
         <>
             <button onClick={() => setIsDarkMode(!isDarkMode)}>
-                passa alla modalità {isDarkMode ? "chiara" : "scura"}
+                {isDarkMode ? (
+                    <MdLightbulbOutline style={{fontSize: "40px"}} />
+                ) : (
+                    <MdOutlineDarkMode style={{fontSize: "40px"}}/>
+                )}
             </button>
         </>
     );
