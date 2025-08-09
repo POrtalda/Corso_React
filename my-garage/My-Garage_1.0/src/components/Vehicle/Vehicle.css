@@ -1,0 +1,73 @@
+.card-vehicle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid #090909; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transizione morbida */
+}
+
+.card-traffic-img-light {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-traffic-img-light img {
+  width: 200px;         /* LARGHEZZA FISSA per tutte */
+  height: 150px;        /* ALTEZZA FISSA per tutte */
+  object-fit: contain;  /* Così non si deforma */
+  margin-bottom: 10px;  /* Spazio tra img e semaforo */
+}
+
+.traffic-light-icon {
+  width: 100px;
+  height: 100px;
+  color: #0c0c0c;
+}
+
+.dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Posizionamento esatto sopra ogni luce */
+.dot.red {
+  background-color: red;
+  top: 174px; /* luce in alto */
+  opacity: 1;
+}
+
+.dot.orange {
+  background-color: orange;
+  top: 199px; /* luce centrale */
+  opacity: 1;
+}
+
+.dot.green {
+  background-color: green;
+  top: 224px; /* luce in basso */
+  opacity: 1;
+}
+
+.card-vehicle_light {
+background-color: #FAFAFA; /* Sfondo chiaro */
+  color: #333333;               /* Testo scuro */
+  border: 2px solid #090909;
+}
+
+.card-vehicle_dark {
+  background-color: #121212;    /* Sfondo scuro */
+  color: #F5F5F5;           /* Testo chiaro */
+  border: 2px solid #F5F5F5;
+}
+

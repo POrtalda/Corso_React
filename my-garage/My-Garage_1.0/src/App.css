@@ -1,0 +1,20 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+
+.app{
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transizione morbida */
+}
+
+/* .light {
+color: darkgreen;
+background-color: darkgoldenrod;
+}
+
+.dark {
+  color: darkgoldenrod;
+  background-color: darkgreen;
+} */

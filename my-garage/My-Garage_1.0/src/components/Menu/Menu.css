@@ -1,0 +1,17 @@
+.active{
+    color: red;
+}
+
+.menu{
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transizione morbida */
+}
+
+.menu_light {
+background-color: #FAFAFA; /* Sfondo chiaro */
+  color: #333333;               /* Testo scuro */
+}
+
+.menu_dark {
+  background-color: #121212;    /* Sfondo scuro */
+  color: #F5F5F5;           /* Testo chiaro */
+}
