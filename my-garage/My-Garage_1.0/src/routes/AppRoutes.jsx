@@ -5,13 +5,14 @@ import Menu from '../components/Menu/Menu';
 import { useEffect, useState } from 'react';
 import ThemeContext from '../context/ThemeContext';
 import { use } from 'react';
+import Details from '../components/Details/Details';
 
 // URL dell'API JSON con i dati dei veicoli
 const URL_API = 'https://portalda.github.io/fake-api-my-garage/my-garage.json';
 
 export default function AppRoutes() {
   // Stato per la lista dei veicoli caricati dall'API
-  const [vehicles, setVehicles] = useState(null);
+  const [vehicles, setVehicles] = useState([]);
 
   // Stato per il tema attuale (false = chiaro, true = scuro)
   const [isDarkMode, setIsDarkMode] = useState(null);
@@ -162,6 +163,14 @@ export default function AppRoutes() {
             }
           />
 
+          {/* dettagli veicolo */}
+          <Route path='details/:id' element={
+            <Details vehicles={vehicles}>
+              <Menu title="Dettagli veicolo" />
+            </Details>             
+            
+          }/>
+
           {/* Pagina di errore 404 */}
           <Route
             path="*"
@@ -171,6 +180,7 @@ export default function AppRoutes() {
               </App>
             }
           />
+
         </Routes>
       </BrowserRouter>
     </ThemeContext.Provider>

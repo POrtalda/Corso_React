@@ -9,7 +9,7 @@ export default function DarkLight() {
 
     return(
         <>
-            <button  onClick={()=> {
+            <button className='btn-Dark-Light' onClick={()=> {
                 setIsDarkMode(!isDarkMode);
             }}>
                 {isDarkMode ? 'Light 🔆' : 'Dark 🌙'}

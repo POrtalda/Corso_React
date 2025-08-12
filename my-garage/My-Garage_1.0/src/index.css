@@ -7,3 +7,7 @@ body{
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+a {
+  color: rgb(78, 75, 75);
+  text-decoration: none;
+}

@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import './Vehicle.css';
 import { RiTrafficLightFill } from "react-icons/ri";
 import ThemeContext from '../../context/ThemeContext';
+import { Link, NavLink } from 'react-router';
 
 
 export default function Vehicle({ vehicle }) {
@@ -30,18 +31,19 @@ export default function Vehicle({ vehicle }) {
     return (
         <>
             <div className={isDarkMode ? 'card-vehicle card-vehicle_dark' : 'card-vehicle card-vehicle_light'}>
+                
+                <Link to={`/details/${vehicle.id}`} className='card-vehicle-link'>
                 <div className='card-vehicle-info'>
                     <h2>{vehicle.brand}</h2>
                     <h3>{vehicle.model}</h3>
                 </div>
-
-
 
                 <div className='card-traffic-img-light'>
                     <img src={vehicle.img_url} alt={vehicle.model} />
                     <RiTrafficLightFill className='traffic-light-icon' color='#515050'/>
                     <span className={`dot ${vehicleStatus}`}></span>
                 </div>
+                </Link>
             </div>
         </>
     );

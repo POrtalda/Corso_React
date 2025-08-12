@@ -1,0 +1,39 @@
+.btn-Dark-Light {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  color: #333;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Hover effetto "lift" */
+.btn-Dark-Light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Effetto click */
+.btn-Dark-Light:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Dark mode */
+body.dark .btn-Dark-Light {
+  background: linear-gradient(135deg, #2b2b2b, #1f1f1f);
+  color: #f0f0f0;
+  box-shadow: 0 3px 6px rgba(255,255,255,0.05);
+}
+
+body.dark .btn-Dark-Light:hover {
+  box-shadow: 0 6px 12px rgba(255,255,255,0.1);
+}
