@@ -1,5 +1,9 @@
 import { createContext } from "react";
 
-const ThemeContext = createContext();
+// Valori di default per evitare errori se manca il Provider
+const ThemeContext = createContext({
+  isDarkMode: false,
+  setIsDarkMode: () => {}
+});
 
 export default ThemeContext;
