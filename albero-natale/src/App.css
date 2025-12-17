@@ -1,0 +1,241 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000033, #3399ff);
+  color: white;
+  font-family: 'Arial', sans-serif, 'Helvetica', sans-serif;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #ffdd00;
+  text-shadow: 
+    0 0 10px #ffff00,
+    0 0 20px #ff0000,
+    0 0 30px #ff0000,
+    0 0 40px #ff0000;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.tree-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.branch {
+  width: 35px;
+  height: 35px;
+  background-color: #228B22;    /* <-- CAMBIA QUI: verde più chiaro e festivo */
+  position: relative;
+  margin: 3px;
+  border-radius: 6px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.light {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 
+    0 0 12px 4px rgba(255, 255, 255, 0.95),
+    0 0 25px 8px currentColor;
+  opacity: 0.95;
+  transition: background-color 0.4s ease;  /* Transizione fluida quando cambiano i colori */
+}
+
+.star {
+  font-size: 52px;
+  color: gold;
+  text-shadow: 
+    0 0 12px yellow,
+    0 0 25px yellow,
+    0 0 40px orange;
+  margin-bottom: 20px;
+  animation: twinkle 2.5s infinite alternate;
+}
+
+/* Animazione scintillio della stella */
+@keyframes twinkle {
+  from {
+    text-shadow: 
+      0 0 12px yellow,
+      0 0 25px yellow,
+      0 0 40px orange;
+    transform: scale(1);
+  }
+  to {
+    text-shadow: 
+      0 0 18px yellow,
+      0 0 35px yellow,
+      0 0 55px orange,
+      0 0 70px red;
+    transform: scale(1.05);
+  }
+}
+
+/* Opzionale: effetto hover leggero sull'albero (per divertimento) */
+.tree:hover .branch {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+/* Contenitore per la neve (assoluto sopra tutto) */
+.snowflakes {
+  position: fixed; /* Copre tutta la pagina */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Non blocca i click */
+  z-index: 9999; /* Sopra tutto */
+}
+
+/* Singolo fiocco di neve */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 1.5em;
+  user-select: none;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+/* Animazione caduta */
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+/* Righe del tronco (per centrare correttamente) */
+.trunk-row {
+  display: flex;
+  justify-content: center;
+  margin-top: -5px; /* Si sovrappone leggermente all'ultimo ramo per naturalezza */
+}
+
+/* Parti del tronco */
+.trunk {
+  background-color: #8B4513;     /* Marrone scuro classico */
+  border-radius: 10px;
+  box-shadow: 
+    inset 0 0 15px rgba(0, 0, 0, 0.6),
+    0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Altezza e larghezza diverse per dare forma realistica */
+.trunk-part-1 {
+  width: 80px;
+  height: 50px;
+}
+
+.trunk-part-2 {
+  width: 70px;
+  height: 60px;
+}
+
+.trunk-part-3 {
+  width: 60px;
+  height: 70px;
+}
+
+/* Riga dei regali */
+.gifts-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Spazio tra i regali */
+  margin-top: 20px;
+}
+
+/* Pacchetto regalo base */
+.gift {
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 
+    0 8px 15px rgba(0, 0, 0, 0.4),
+    inset 0 -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Nastri orizzontale e verticale */
+.ribbon-horizontal,
+.ribbon-vertical {
+  position: absolute;
+  background-color: gold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.ribbon-horizontal {
+  width: 100%;
+  height: 18px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.ribbon-vertical {
+  width: 18px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* Fiocco in cima */
+.bow {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: gold;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.bow::before,
+.bow::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background-color: gold;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  top: -5px;
+}
+
+.bow::before {
+  left: -18px;
+  transform: rotate(-30deg);
+}
+
+.bow::after {
+  right: -18px;
+  transform: rotate(30deg);
+}
